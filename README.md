@@ -5,15 +5,7 @@
 [![works with prezto](https://img.shields.io/badge/works%20with-%E2%9D%AF%E2%9D%AF%E2%9D%AF%20prezto-red)](#install-for-prezto)
 [![works with ohmyzsh](https://img.shields.io/badge/works%20with-%20%E2%9E%9C%20oh--my--zsh-C2D33F)](#install-for-oh-my-zsh)
 
-> This plugin is amazing...
-
-## Description
-
-This plugin allows you to...
-
-## Customizing
-
-Customize this plugin by doing this...
+> Add color to your Zsh setup
 
 ## Installation
 
@@ -40,7 +32,7 @@ Then, in your .zshrc, add the following line:
 source ${ZDOTDIR:-~}/.zplugins/color/color.zsh
 ```
 
-### Install for Oh-My-Zsh
+### Oh-My-Zsh Install
 
 To install with [Oh-My-Zsh][ohmyzsh], first clone the repo from an interactive Zsh session:
 
@@ -59,7 +51,7 @@ Then, add the plugin to your Oh-My-Zsh plugins list in your .zshrc
 plugins=(... color)
 ```
 
-### Install for Prezto
+### Prezto Install
 
 To install with [Prezto][prezto], first clone the repo from an interactive Zsh session:
 
