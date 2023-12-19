@@ -1,0 +1,9 @@
+#!/bin/zsh
+# function colormap {
+
+# p10k - https://github.com/romkatv/powerlevel10k/blob/cc6ed4be416b70fe4e3f97d17061c751abaca04f/config/p10k-lean.zsh#L6
+for i in {0..255}; do
+  print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\n'}
+done
+
+# }
