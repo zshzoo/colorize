@@ -6,8 +6,9 @@
 [[ "$TERM" != 'dumb' ]] || return 1
 
 # Load plugin functions.
-fpath=(${0:A:h}/functions $fpath)
-autoload -U $fpath[1]/*(.:t)
+0=${(%):-%N}
+fpath=(${0:a:h}/functions $fpath)
+autoload -U ${0:a:h}/functions/*(.:t)
 
 # Colorize man pages.
 # start/end - md/me:bold; us/ue:underline; so/se:standout;
@@ -24,7 +25,7 @@ export LESS_TERMCAP_us=$'\e[04;35m'
 () {
   local prefix cache zsh_cache
 
-  zsh_cache=${XDG_CACHE_HOME:=$HOME/.cache}/zshzoo
+  zsh_cache=${XDG_CACHE_HOME:-$HOME/.cache}/zsh/zshzoo
   [[ -d $zsh_cache ]] || mkdir -p $zsh_cache
 
   # Cache results of running dircolors for 20 hours, so it should almost
